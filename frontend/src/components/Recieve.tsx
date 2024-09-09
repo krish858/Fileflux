@@ -21,8 +21,9 @@ function Recieve() {
   };
 
   async function joinroom() {
-    await alert("joining room");
-    navigate(`/recieve/${pin}`);
+    console.log(pin);
+    // await alert("joining room");
+    // navigate(`/recieve/${pin}`);
   }
 
   return (

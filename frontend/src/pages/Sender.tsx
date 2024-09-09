@@ -26,8 +26,16 @@ function Sender() {
 
   useEffect(() => {
     checkroomid();
+
     socket.on("connect", () => {
       console.log("connected");
+      socket.emit("roomNo", roomid);
+
+      //  @ts-ignore
+
+      // socket.on("mess", (mess) => {
+      //   console.log(mess);
+      // });
     });
   }, [roomid, navigate]);
 
