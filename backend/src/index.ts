@@ -21,6 +21,12 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("user disconnected");
   });
+
+  socket.on("roomNo", (roomNo) => {
+    console.log(roomNo);
+
+    // io.to(roomNo).emit("mess", "Helloooooo");
+  });
 });
 
 server.listen(port, () => {
